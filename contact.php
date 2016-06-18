@@ -55,14 +55,69 @@ $attachment
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Contact Me</title>
 <style>
-form {max-width:300px;width:100%;padding:20px;border:none;background-color:#ffffff;border-radius:5px;margin: 0px 0px 0px -8px;}
-fieldset {margin:0px 0px 15px 0px;border:none;}
-label {font-family:Arial;font-size:16px;color:#333;margin:0;padding:0;display:block;border:none;}
-input {background-color:#fff;border:none;border-radius:5px;margin:10px 0px 0px 0px;max-width:250px;width:100%;padding: 10px 0px;}
-input[type="file" i] {background-color: #ccc;}
-input[type="submit"] {margin:20px 0px 0px 12px;padding:5px 10px;background-color:#fff;color:#333;display:block;width: 100px;height: 35px;}
-input[type="submit"]:hover {background-color:#999;color:#fff;}
-#submit {width:100%;text-align:left;margin:0;padding:0;}
+form {
+	max-width: 552px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0px 0px 0px -8px;
+    font-family: arial, sans-serif;
+}
+fieldset {
+	margin:0px 0px 15px 0px;
+	border:none;
+}
+label {
+	font-family:Arial;
+	font-size:16px;
+	color:#333;
+	margin:0;
+	padding:0;
+	display:block;
+	border:none;
+}
+input {
+	background-color: #fff;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 10px 0px 0px 0px;
+	max-width: 300px;
+	width: 100%;
+	height: 25px;
+	padding: 10px 10px;
+	font-size: 12px;
+}
+input[type="file" i] {
+	background-color: #ccc;
+}
+input[type="submit"] {
+	margin:20px 0px 0px 12px;
+	padding:5px 10px;
+	color:#333;
+	display:block;
+	height: 35px;
+}
+textarea {
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 10px 0px 0px 0px;
+	max-width: 300px;
+	width: 100%;
+	height: 100px;
+	padding: 10px 10px;
+}
+#submit {
+	width:100%;
+	max-width:150px;
+	text-align:center;
+	background-color:#ededed;
+}
+#submit:hover {
+	background-color:#999;
+	color:#fff;
+	}
 </style>
 </head>
 
