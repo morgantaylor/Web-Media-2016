@@ -31,7 +31,7 @@ footer {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 0 40px 20px;
+    padding: 0 20px 20px;
     background: #ccc;
 }
 
@@ -61,13 +61,12 @@ footer .social-icons p {
     position: relative;
     float: left;
     padding: 20px 0 0;
-    width: 250px;
+    width: 230px;
 }
 
 footer .copyright {
-    max-width: 200px;
-    width: 100%;
-    text-align: left;
+    max-width: 300px;
+    text-align: center;
     display: block;
     position: relative;
     padding: 30px 0 0;
@@ -125,12 +124,17 @@ p {
     margin: 0;
 }
 
+h1 {
+	font-size:24px;	
+}
+
 h2 {
     color: #000;
 }
 
 .upper {
     text-transform: uppercase;
+	font-size:15px;
 }
 
 .text h3 {
@@ -265,6 +269,7 @@ a > .liveSite:hover {
     display: block;
     padding-top: 40px;
     padding-bottom: 40px;
+	font-size:18px;
 }
 
 .grid.skills:nth-of-type(3) > img {
@@ -350,6 +355,44 @@ iframe {
         width: 75%;
         padding: 30px 20px 0;
     }
+	
+	footer {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 0 40px 20px;
+		background: #ccc;
+	}
+	
+	footer .social-icons {
+		max-width: 300px;
+		width: 100%;
+		height: auto;
+		text-align: left;
+		display: inline-block;
+		position: relative;
+	}
+	
+	footer .social-icons span {
+		display: inline-block;
+		position: relative;
+		float: left;
+		clear: left;
+		width: 40px;
+		text-align: left;
+		font-size: 1.8em;
+		padding: 20px 0 10px;
+	}
+	
+	footer .social-icons p {
+		font-size: 1em;
+		display: inline-block;
+		position: relative;
+		float: left;
+		padding: 20px 0 0;
+		width: 250px;
+	}
+
 }
 
 @media screen and (min-width:600px) {
