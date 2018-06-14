@@ -11,12 +11,13 @@
 
 <link href="css/normalize.min.css" rel="stylesheet" type="text/css">
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Custom styles for this website -->
-<link href="css/styles.min.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -47,12 +48,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Morgan Taylor<br><small>Front-End Web Developer</small></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="http://mtwebmedia.com">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li class="active"><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -64,85 +63,104 @@
     	<section class="pageTop bkgd">
         	<h1>Portfolio</h1>
         </section>
-        <div class="grid clearfix">
+        <div class="grid">
+          <a href="#">
+                <div id="dff" class="cube card whiteBkgd">
+                   <img class="logo" src="img/cubes/cube-dailyflowfitness.png" alt="Daily Flow Fitness Logo">
+                   <div class="caption">
+                     <h4>Website</h4>
+                     <p>HTML &#x000B7;CSS &#x000B7; SASS &#x000B7; Responsive &#x000B7; Javascript</p>
+                   </div>
+                </div>
+            </a>
         	<a href="study-kfog.html">
-                <div id="kfog" class="cube dark-greyBkgd">
+                <div id="kfog" class="cube card dark-greyBkgd">
                    <img class="logo" src="img/cubes/cube-kfog.png" alt="KFOG Logo">
-                   <p>KFOG: Website Rebuild<br>
-                   <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                   <div class="caption">
+                     <h4>Website Rebuild</h4>
+                     <p>CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                   </div>
                 </div>
             </a>
             <a href="study-levis.html">
-                <div id="levis" class="cube light-greyBkgd">
+                <div id="levis" class="cube card light-greyBkgd">
                     <img class="logo" src="img/cubes/cube-levis.png" alt="Levi's® Lounge Logo">
-                    <p>Levi's<span style="font-size:11px;vertical-align:top;">®</span> Lounge: Microsite<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                    <div class="caption">
+                      <h4>Microsite</h4>
+                      <p>CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                    </div>
                 </div>
             </a>
             <a href="study-bridgetobridge.html">
-                <div id="bridgetobridge" class="cube whiteBkgd">
+                <div id="bridgetobridge" class="cube card whiteBkgd">
                     <img class="logo" src="img/cubes/cube-bridgetobridge.png" alt="Bridge to Bridge Logo">
-                    <p>Bridge to Bridge: Website Rebuild<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; JavaScript</span></p>
+                    <div class="caption">
+                      <h4>Website Rebuild</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive &#x000B7; JavaScript</p>
+                    </div>
                 </div>
             </a>
             <a href="study-mcdonalds.html">
-                <div id="fanfest" class="cube light-greyBkgd">
+                <div id="fanfest" class="cube card light-greyBkgd">
                     <img class="logo" src="img/cubes/cube-mcdonalds.png" alt="FanFest Logo">
-                    <p>KNBR FanFest Insider 2016: Microsite<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                    <div class="caption">
+                      <h4>Microsite</h4>
+                      <p>CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                    </div>
                 </div>
             </a>
             <a href="study-kgoradio.html">
-                <div id="kgoradio" class="cube middle-greyBkgd">
+                <div id="kgoradio" class="cube card middle-greyBkgd">
                     <img class="logo" src="img/cubes/cube-kgoradio.png" alt="KGO Radio Logo">
-                    <p>KGO Radio: Partial Website Rebuild<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                    <div class="caption">
+                      <h4>Partial Website Rebuild</h4>
+                      <p>CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                    </div>
                 </div>
             </a>
             <a href="study-knbr.html">
-                <div id="bashof" class="cube whiteBkgd">
+                <div id="bashof" class="cube card whiteBkgd">
                     <img class="logo" src="img/cubes/cube-knbr.png" alt="KNBR Logo">
-                    <p>KNBR Partnership Auctions: Pages<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                    <div class="caption">
+                      <h4>Wordpress Pages</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                    </div>
                 </div>
             </a>
             <a href="study-foodbanks.html">
-                <div id="foodbanks" class="cube whiteBkgd">
+                <div id="foodbanks" class="cube card whiteBkgd">
                     <img class="logo" src="img/cubes/cube-foodbanks.png" alt="Food Banks Logo">
-                    <p>Bay Area Food Banks: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
+                    <div class="caption">
+                      <h4>Microsite</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive &#x000B7; Wordpress</p>
+                    </div>
                 </div>
             </a>
             <a href="study-sobek.html">
-                <div id="sobek" class="cube dark-greyBkgd">
+                <div id="sobek" class="cube card dark-greyBkgd">
                     <img class="logo" src="img/cubes/cube-sobek.png" alt="Sobek Logo">
-                    <p>Mountain Travel Sobek: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</span></p>
+                    <div class="caption">
+                      <h4>Microsite</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</p>
+                    </div>
                 </div>
             </a>
             <a  href="study-yosemite.html">
-                <div id="yosemite" class="cube middle-greyBkgd">
+                <div id="yosemite" class="cube card middle-greyBkgd">
                     <img class="logo" src="img/cubes/cube-yosemite.png" alt="Yosemite Logo">
-                    <p>Yosemite Experience: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</span></p>
-                </div>
-            </a>
-            <a  href="#">
-                <div id="" class="cube whiteBkgd blank">
-                    
+                    <div class="caption">
+                      <h4>Microsite</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</p>
+                  </div>
                 </div>
             </a>
             <a  href="study-colossal.html">
-                <div id="colossal" class="cube whiteBkgd">
+                <div id="colossal" class="cube card whiteBkgd">
                     <img class="logo" src="img/cubes/cube-colossal.png" alt="Colossal Logo">
-                    <p>This is Colossal: Website Rebuild<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive Design &#x000B7; Bootstrap</span></p>
-                </div>
-            </a>
-            <a  href="#">
-                <div id="" class="cube whiteBkgd blank">
-                    
+                    <div class="caption">
+                      <h4>Website Rebuild</h4>
+                      <p>HTML &#x000B7; CSS&#x000B7; Responsive Design &#x000B7; Bootstrap</span></p>
+                    </div>
                 </div>
             </a>
         </div>

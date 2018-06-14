@@ -23,15 +23,12 @@
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: center;
-
     width: 100%;
-
     position: relative;
     border: 1px solid transparent;
     color: transparent;
     border-radius: 6px;
     padding: 25px;
-    background-color: transparent;
 
     &.card--small {
         max-width: 250px;
