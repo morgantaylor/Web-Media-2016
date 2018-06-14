@@ -11,12 +11,13 @@
 
 <link href="css/normalize.min.css" rel="stylesheet" type="text/css">
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Custom styles for this website -->
-<link href="css/styles.min.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,40 +39,118 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-static-top bkgd"><!-- Static navbar -->
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Morgan Taylor<br><small>Front-End Web Developer</small></a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="http://mtwebmedia.com">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
   <div class="pageWrapper">
     <div class="innerPage">
-    	<section class="pageTop bkgd">
-        	<div class="grid">
-            	<img class="thumb" src="img/thumbs/kfog-300.jpg" alt="KFOG Thumbnail Image">
-                <img class="thumb" src="img/thumbs/bridgetobridge-300.jpg" alt="Bridge to Bridge Thumbnail Image">
-                <img class="thumb" src="img/thumbs/colossal-300.jpg" alt="Colossal Thumbnail Image">
-            <h1>Responsive Front-End Development</h1>
-        	<p class="upper">html &#x000B7; css &#x000B7; Responsive Design &#x000B7; Wordpress</p>
-            <p id="arrow" class="white">Portfolio<br>&#x02228;</p>
-			</div>
-        </section>
-        <div class="grid clearfix">
+    	<section class="pageTop panel whiteBkgd">
+        <div class="panel__container panel__container--intro">
+
+          <h1>Designer & Developer</h1>
+        	<p>I am actively searching for the gap between design and engineering. I live in the world between the two, searching for a way to bridge the gap.</p>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="panel__container">
+          <img class="img-circle" src="img/thumbs/me.jpg" alt="Picture of Morgan Taylor" />
+        </div>
+        
+      </section>
+      <section class="panel coralBkgd">
+        <div class="panel__container panel__container--about">
+          <h3 class="white">Hi I'm Morgan. Welcome to my website.</h3>
+          <p class="white font-light">This is where i should write a little about myself. I left college with a BFA in Photography. Found out that that couldn't be my full time job. Took stock of the situation and thought back to when i had to make my portfolio website for photography. I thought it was fun, challenging, and had the ability to be ellegant. Since then i have been either freelancing or working as a developer.</p>
+          <a href="MorganTaylor.pdf" target="_blank">
+            <button id="download" class="btn btn-reverse-white">Download my resume</button>
+          </a>
+        </div>
+      </section>
+      <section class="panel panel__container--skills">
+        <div class="flex-cards">
+          <div class="card card--large skin-light">
+            <div class="card-name">Design</div>
+            <div class="card-title coral">What I Design</div>
+            <ul class="list-unstyled">
+              <li>Web</li>
+              <li>Mobile</li>
+              <li>Apps</li>
+              <li>UX/UI</li>
+              <li>Marketing Collateral</li>
+              <li>Logos</li>
+            </ul>
+            <div class="card-title coral">Design Tools</div>
+            <ul class="list-unstyled">
+              <li>Sketch</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Invision</li>
+              <li>JustinMind</li>
+              <li>Pen & Paper</li>
+            </ul>
+          </div>
+          <div class="card card--large skin-light">
+            <div class="card-name">Develop</div>
+            <div class="card-title coral">Languages</div>
+            <ul class="list-unstyled">
+              <li>HTML/HTML5</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>Javascript</li>
+              <li>Wordpress</li>
+            </ul>
+            <div class="card-title coral">Actively Learning</div>
+            <ul class="list-unstyled">
+              <li>MySQL</li>
+            </ul>
+            <div class="card-title coral">Dev Tools</div>
+            <ul class="list-unstyled">
+              <li>Bootstrap</li>
+              <li>Material Design</li>
+              <li>CodePen</li>
+              <li>Github/Github GUI</li>
+              <li>Command Line</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="panel ">
+        <div class="panel__container panel__container--projects">
+          <h3>Sample Projects</h3>
+          <div>
+
+            <div class="feed__box">
+              <img class="feed__img" src="img/mockups/dff-mockup.png" alt="Daily Flow Fitness Logo">
+              <div class="feed__inner">
+                <div class="feed__title coral">Design / Front End Development</div>
+                <p class="small">HTML, CSS, SASS, PHP, Javascript</p>
+                <p class="feed__info">Brand new mobile first Website made for a fitness professional.</p>
+                <a href="dailyflowfitness.com"><button class="btn link-gray feed__button">Visit Website</button></a>
+              </div>
+            </div>
+            <hr>
+            <div class="feed__box">
+              <img class="feed__img" src="img/mockups/kfog-mockup.png" alt="KFOG Mockup Image">
+              <div class="feed__inner">
+                <div class="feed__title coral">Front End Development</div>
+                <p class="small">CSS, Responsive, Wordpress</p>
+                <p class="feed__info">Redesigned and restructured an existing Worpress website.</p>
+                <a href="http://www.kfog.com/" target="_blank"><button class="btn link-gray feed__button">Visit Website</button></a>
+                <a href="study-kfog.html"><button class="btn link-blue feed__button">Lean More</button></a>
+              </div>
+            </div>
+            <hr>
+            <div class="feed__box">
+              <img class="feed__img" src="img/mockups/b2b-mockup.png" alt="Bridge to Bridge Mockup Image">
+              <div class="feed__inner">
+                <div class="feed__title coral">Design / Front End Development</div>
+                <p class="small">HTML, CSS, Responsive, Javascript</p>
+                <p class="feed__info">Responsive Event Website.</p>
+                <a href="study-bridgetobridge.html"><button class="btn link-blue feed__button">Lean More</button></a>
+              </div>
+            </div>
+            <a href="portfolio.html"><button class="btn link-blue feed__button--more">More Projects...</button></a>
+          </div>
+        </div>
+      </section>
+        <!-- <div class="grid clearfix">
         	<a href="study-kfog.html">
                 <div id="kfog" class="cube dark-greyBkgd">
                    <img class="logo" src="img/cubes/cube-kfog.png" alt="KFOG Logo">
@@ -152,7 +231,7 @@
                     
                 </div>
             </a>
-        </div>
+        </div> -->
 	</div>
 
 	<footer class="clearfix">
