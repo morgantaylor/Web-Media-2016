@@ -1,0 +1,93 @@
+// ==============
+// Buttons
+// ==============   
+
+a,
+button,
+.btn {
+    outline: none;
+}
+
+.btn {
+    margin: 0 5px;
+    padding: 15px 25px;
+    text-transform: none;
+    border-radius: 3px;
+  
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    min-height: 36px;
+    min-width: 88px;
+    text-align: center;
+    font-size: 16px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    overflow: hidden;
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),
+                background-color .4s cubic-bezier(.25,.8,.25,1);
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.btn-white {@include button-skin('btn-', $white);}
+.btn-gray {@include button-skin('btn-', $dark-gray);}
+.btn-green {@include button-skin('btn-', $green);}
+.btn-red {@include button-skin('btn-', $red);}
+.btn-blue {@include button-skin('btn-', $blue);}
+
+.btn-reverse-white {@include button-skin('btn-reverse-', $white);}
+.btn-reverse-gray {@include button-skin('btn-reverse-', $dark-gray);}
+.btn-reverse-green {@include button-skin('btn-reverse-', $green);}
+.btn-reverse-red {@include button-skin('btn-reverse-', $red);}
+.btn-reverse-blue {@include button-skin('btn-reverse-', $blue);}
+
+.link-white {@include button-skin('link-', $white);}
+.link-gray {@include button-skin('link-', $dark-gray);}
+.link-green {@include button-skin('link-', $green);}
+.link-red {@include button-skin('link-', $red);}
+.link-blue {@include button-skin('link-', $blue);}
+
+.btn-dark-bg.link {
+    &-gray {
+        &:hover { 
+           color:  lighten($mid-gray, 15%);
+        
+        }
+    }
+    &-blue {
+        &:hover {
+           color:  lighten($blue, 15%);
+        }
+    }
+    &-red {
+        &:hover {
+           color:  lighten($red, 15%);
+        }
+    }
+    &-green {
+        &:hover {
+           color:  lighten($green, 15%);
+        }
+    }
+}
+
+a > .liveSite {
+    position: relative;
+    display: block;
+    max-width: 200px;
+    width: 100%;
+    margin: 30px auto 60px;
+    padding: 10px 0;
+    background-color: #666;
+    color: #fff;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+a > .liveSite:hover {
+    background-color: #f44;
+}

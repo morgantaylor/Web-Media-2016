@@ -1,0 +1,46 @@
+// ==================
+// Variables
+// ==================
+
+
+// Descriptive Colors
+
+$white        :   #ffffff;
+$black        :   #000000;
+
+$dark-gray    :   #63666a;
+$mid-gray     :   #b8babb;
+$light-gray   :   #e7e8e8;
+
+$yellow       :   #FFBA00;
+$red          :   #e86160;
+$green        :   #5dcc20;
+$blue         :   #0083c6;
+$dark-blue    :   #212943;
+$coral        :   #ff7373;
+
+// Fonts
+
+$sans-serif   :    sans-serif;
+$opensans     :   'Open Sans', $sans-serif;
+$ptsans       :   'PT Sans', $sans-serif;
+
+// Font Sizes
+
+$font-extralg :    25rem; // 40px
+$font-large   :    15rem; // 32px
+$font-medium  :    1rem;   // 16px
+$font-small   :    .9rem;  // 14px
+$font-xsmall  :    .8rem;   // 12px
+
+// Background Colors
+
+$whiteBkgd       : $white;
+$blackBkgd       : $black;
+$orangeBkgd      : #ff7f50;
+$greenBkgd       : #6dc066;
+$blueBkgd        : $blue;
+$coralBkgd       : $coral;
+$dark-greyBkgd   : $dark-gray;
+$middle-greyBkgd : $mid-gray;
+$light-greyBkgd  : $light-gray;
