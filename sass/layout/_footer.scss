@@ -1,9 +1,16 @@
 footer {
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    background: #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background: $coral;
+
+    h6 {
+        padding: 0;
+        margin: 0;
+        color: $black;
+    }
 }
 
 footer .social-icons {
@@ -18,8 +25,6 @@ footer .social-icons {
 footer .social-icons span {
     display: inline-block;
     position: relative;
-    float: left;
-    clear: left;
     width: 40px;
     text-align: left;
     font-size: 1.8em;
@@ -30,7 +35,6 @@ footer .social-icons p {
     font-size: 1em;
     display: inline-block;
     position: relative;
-    float: left;
     padding: 20px 0 0;
     width: 230px;
 }

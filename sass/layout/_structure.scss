@@ -26,6 +26,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    box-shadow: none;
 }
 
 .panel__container {
@@ -47,6 +48,21 @@
         }
         ul {
             margin-bottom: 25px;
+        }
+    }
+
+    &--projects {
+        .feed__box:first-of-type {
+            .feed__img {
+                background-color: #ececef;
+            }
+        }
+        .icon--code {
+            color: $black;
+            display: flex;
+            font-size: 80px;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
@@ -171,12 +187,7 @@
         display: inline-block;
     }
 
-    footer .social-icons {
-        float: left;
-    }
-
     footer .copyright {
-        float: right;
         margin-top:30px;
     }
 

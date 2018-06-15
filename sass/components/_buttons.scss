@@ -6,6 +6,10 @@ a,
 button,
 .btn {
     outline: none;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .btn {
