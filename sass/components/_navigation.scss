@@ -9,10 +9,8 @@
     border: none;
 }
 
-.navbar-brand,
-.navbar-brand:hover,
-.navbar li a {
-    color: #333 !important;
+.navbar-default .navbar-nav>li>a {
+    color: #333;
 }
 
 .navbar-default {
@@ -23,7 +21,8 @@
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
     background-color:  $white;
-    border-bottom: 1px solid  $white;
+    color: $coral;
+    border-bottom: 1px solid $coral;
 }
 
 .navbar-default .navbar-toggle {
