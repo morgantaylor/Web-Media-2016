@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Custom styles for this website -->
-<link href="css/styles.min.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,34 +59,43 @@
   </nav>
   <div class="pageWrapper">
     <div class="innerPage">
-      <section class="pageTop panel whiteBkgd">
-        <div class="panel__container panel__container--intro">
-
+      <section class="panel whiteBkgd">
+        <div class="panel__container--info">
           <h1>Contact Me</h1>
-          <p>Want to talk about a cool project? Fill out the form below and i'll be sure to get in touch.</p>
+          <p>Fill out the form below and I'll be sure to get in touch.</p>
         </div>
       </section>
-        <section class="text">
-        	<iframe src="contact.php"></iframe>
-        </section>
-	</div>
+      <section class="panel">
+      	<form id="contact-form" method="post" action="contact.php" role="form" data-toggle="validator">
+          <div class="messages"></div>
+          <fieldset class="form-group">
+            <label for="form_name">Name *</label>
+              <input id="form_name" type="text" name="name" placeholder="Please enter your name *" required="required" data-error="Name is required.">
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="form_email">Email *</label>
+              <input id="form_email" type="email" name="email" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="form_message">Message *</label>
+              <textarea id="form_message" name="message" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+      <footer>
+        <h6>Morgan Taylor &#169; 2018</h6>
+      </footer>
+  	</div>
+  </div><!-- pageWrapper end -->
 
-	<footer class="clearfix">
-    	<div class="social-icons">
-          <span class="fa fa-linkedin-square"></span><p>View my <a href="https://www.linkedin.com/in/morganataylor" target="_blank">LinkedIn Profile</a></p>
-          <span class="fa fa-pinterest"></span><p> Follow my Pinterest boards <a href="https://www.pinterest.com/mataylor8/" target="_blank">@mataylor8</a> for <a href="https://www.pinterest.com/mataylor8/web-design/" target="_blank">web design</a>, <a href="https://www.pinterest.com/mataylor8/css/" target="_blank">CSS </a>& <a href="https://www.pinterest.com/mataylor8/uxui/" target="_blank">UX/UI</a> ideas</p>
-          <span class="fa fa-github"></span><p>To sample my projects view <a href="https://github.com/morgantaylor" target="_blank">@morgantaylor</a> on GitHub</p>
-        </div>
-        <div class="copyright">
-        	<a href="about.html"><p>About</p></a>
-            <a href="portfolio.html"><p>Portfolio</p></a>
-            <a href="contact.html"><p>Contact</p></a>
-            <h6>Morgan Taylor &#169; 2016</h6>
-        </div>
-    </footer>
-</div><!-- pageWrapper end -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async type="text/javascript" src="js/main.js"></script> 
 </body>
 </html>

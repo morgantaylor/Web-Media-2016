@@ -1,140 +1,75 @@
 <?php
-    if(isset($_POST['submit']))
-    {
-    	//The form has been submitted, prep a nice thank you message
-    	$output = '<h1>Thanks for your email!</h1>';
-    	//Set the form flag to no display (cheap way!)
-    	$flags = 'style="display:none;"';
+/*
+ *  CONFIGURE EVERYTHING HERE
+ */
 
-    	//Deal with the email
+// an email address that will be in the From field of the email.
+$from = 'mtwebmedia@website.com';
 
-        $to = 'mtwebmedia@gmail.com';
-        $subject = 'Portfolio Contact Form';
-		$name = "Name: " . strip_tags($_POST['name']) . "\n";
-		$email = "Email: " . strip_tags($_POST['email']) . "\n";
-		$note = "Message: " . strip_tags($_POST['note']) . "\n";
-		
-		
-		$message = $name . $email . $note;
-    	
-    	$attachment = chunk_split(base64_encode(file_get_contents($_FILES['uploaded_file']['tmp_name'])));
-    	$filename = $_FILES['uploaded_file']['name'];
+// an email address that will receive the email with the output of the form
+$sendTo = 'mtwebmedia@gmail.com';
 
-    	$boundary =md5(date('r', time())); 
+// subject of the email
+$subject = 'New Client Inquiry';
 
-    	$headers = "From: mtwebmedia@reply.com\r\nReply-To: mtwebmedia@reply.com";
-    	$headers .= "\r\nMIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"_1_$boundary\"";
+// form field names and their translations.
+// array variable name => Text to appear in the email
+$fields = array('name' => 'Name', 'lastname' => 'Last Name', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
 
-    	$message="This is a multi-part message in MIME format.
+// message that will be displayed when everything is OK :)
+$okMessage = 'Your message has been sent. Thank you, I will get back to you soon!';
 
---_1_$boundary
-Content-Type: multipart/alternative; boundary=\"_2_$boundary\"
+// If something goes wrong, we will display this message.
+$errorMessage = 'There was an error while submitting the form. Please try again later';
 
---_2_$boundary
-Content-Type: text/plain; charset=\"iso-8859-1\"
-Content-Transfer-Encoding: 7bit
+/*
+ *  LET'S DO THE SENDING
+ */
 
-$message
+// if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE);
 
---_2_$boundary--
---_1_$boundary
-Content-Type: application/octet-stream; name=\"$filename\" 
-Content-Transfer-Encoding: base64 
-Content-Disposition: attachment 
+try
+{
 
-$attachment
---_1_$boundary--";
+    if(count($_POST) == 0) throw new \Exception('Form is empty');
+            
+    $emailText = "You have a new message from your contact form\n=============================\n";
 
-    	mail($to, $subject, $message, $headers);
-		$flags = 'style="display:none;"';
+    foreach ($_POST as $key => $value) {
+        // If the field exists in the $fields array, include it in the email 
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
     }
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Contact Me</title>
-<style>
-form {
-	max-width: 552px;
-    width: 100%;
-    padding: 20px;
-    border: none;
-    background-color: #ffffff;
-    border-radius: 5px;
-    margin: 0px 0px 0px -8px;
-    font-family: arial, sans-serif;
-}
-fieldset {
-	margin:0px 0px 15px 0px;
-	border:none;
-}
-label {
-	font-family:Arial;
-	font-size:16px;
-	color:#333;
-	margin:0;
-	padding:0;
-	display:block;
-	border:none;
-}
-input {
-	background-color: #fff;
-	border: solid 1px #ccc;
-	border-radius: 5px;
-	margin: 10px 0px 0px 0px;
-	max-width: 300px;
-	width: 100%;
-	height: 25px;
-	padding: 10px 10px;
-	font-size: 12px;
-}
-input[type="file" i] {
-	background-color: #ccc;
-}
-input[type="submit"] {
-	margin:20px 0px 0px 12px;
-	padding:5px 10px;
-	color:#333;
-	display:block;
-	height: 35px;
-}
-textarea {
-	border: solid 1px #ccc;
-	border-radius: 5px;
-	margin: 10px 0px 0px 0px;
-	max-width: 300px;
-	width: 100%;
-	height: 100px;
-	padding: 10px 10px;
-}
-#submit {
-	width:100%;
-	max-width:150px;
-	text-align:center;
-	background-color:#ededed;
-}
-#submit:hover {
-	background-color:#999;
-	color:#fff;
-	}
-</style>
-</head>
 
-<body>
-<?php echo $output ?>
-<form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" <?php echo $flags;?>>
-<fieldset>
-<label>Name:</label>
-<input type="text" required name="name" placeholder="Full Name">
-</fieldset>
-<fieldset>
-<label>Email:</label>
-<input type="text" required name="email" placeholder="Email Address">
-</fieldset>
-<fieldset>
-<label>Message:</label>
-<textarea name="note" placeholder="Type your message here." required></textarea>
-</fieldset>
-<input type="submit" name="submit" id="submit" value="Submit">
-</form>
+    // All the neccessary headers for the email.
+    $headers = array('Content-Type: text/plain; charset="UTF-8";',
+        'From: ' . $from,
+        'Reply-To: ' . $from,
+        'Return-Path: ' . $from,
+    );
+    
+    // Send email
+    mail($sendTo, $subject, $emailText, implode("\n", $headers));
+
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
+
+
+// if requested by AJAX request return JSON response
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+
+    header('Content-Type: application/json');
+
+    echo $encoded;
+}
+// else just display the message
+else {
+    echo $responseArray['message'];
+}

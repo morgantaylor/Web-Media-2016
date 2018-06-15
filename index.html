@@ -57,9 +57,26 @@
       <section class="panel coralBkgd">
         <div class="panel__container panel__container--about">
           <h3 class="white">Hi I'm Morgan. Welcome to my website.</h3>
-          <p class="white font-light">This is where i should write a little about myself. I left college with a BFA in Photography. Found out that that couldn't be my full time job. Took stock of the situation and thought back to when i had to make my portfolio website for photography. I thought it was fun, challenging, and had the ability to be ellegant. Since then i have been either freelancing or working as a developer.</p>
-          <a href="MorganTaylor.pdf" target="_blank">
-            <button id="download" class="btn btn-reverse-white">Download my resume</button>
+          <p class="white font-light">I'm a dairy free, pizza obsessed, lover of all things Lego looking to try new things in web development and learn as much as I can along the way. Currently i'm working as a Web Developer in the Bay Area. Having an art school background with a BFA in Photography and a certificate in Web Media gives me an unusual perspective. While i'm currently more focused on front end development aspects, bridging the gab between the logical and creative in my passion and goal.</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/morganataylor" target="_blank">
+              <span class="fa fa-linkedin-square" aria-hidden="true"></span>
+            </a>
+            <a href="https://www.pinterest.com/mataylor8/" target="_blank">
+              <span class="fa fa-pinterest" aria-hidden="true"></span>
+            </a>
+            <a href="https://github.com/morgantaylor" target="_blank">
+              <span class="fa fa-github" aria-hidden="true"></span>
+            </a>
+            <a href="https://codepen.io/mtaylor148" target="_blank">
+              <span class="fa fa-codepen" aria-hidden="true"></span>
+            </a>
+          </div>
+          <a href="resume.pdf" target="_blank">
+            <button id="download" class="btn btn-reverse-white">Download My Resume</button>
+          </a>
+          <a href="contact.html">
+            <button class="btn btn-reverse-white">Contact Me</button>
           </a>
         </div>
       </section>
@@ -115,13 +132,24 @@
         <div class="panel__container panel__container--projects">
           <h3>Sample Projects</h3>
           <div>
-
+            <div class="feed__box">
+              <div class="feed__img">
+                <span class="fa fa-code icon--code" aria-hidden="true"></span>
+              </div>
+              <div class="feed__inner">
+                <div class="feed__title coral">Design / CSS</div>
+                <p class="small">CSS, SASS</p>
+                <p class="feed__info">In progress: Creating a lightweight CSS library with responsive modules. Github link coming soon!</p>
+                <!-- <a href="#" target="_blank"><button class="btn link-gray feed__button">Check it out on Github</button></a> -->
+              </div>
+            </div>
+            <hr>
             <div class="feed__box">
               <img class="feed__img" src="img/mockups/dff-mockup.png" alt="Daily Flow Fitness Logo">
               <div class="feed__inner">
                 <div class="feed__title coral">Design / Front End Development</div>
                 <p class="small">HTML, CSS, SASS, PHP, Javascript</p>
-                <p class="feed__info">Brand new mobile first Website made for a fitness professional.</p>
+                <p class="feed__info">Brand new mobile first Website made for a fitness professional</p>
                 <a href="dailyflowfitness.com"><button class="btn link-gray feed__button">Visit Website</button></a>
               </div>
             </div>
@@ -131,7 +159,7 @@
               <div class="feed__inner">
                 <div class="feed__title coral">Front End Development</div>
                 <p class="small">CSS, Responsive, Wordpress</p>
-                <p class="feed__info">Redesigned and restructured an existing Worpress website.</p>
+                <p class="feed__info">Redesigned and restructured an existing Worpress website</p>
                 <a href="http://www.kfog.com/" target="_blank"><button class="btn link-gray feed__button">Visit Website</button></a>
                 <a href="study-kfog.html"><button class="btn link-blue feed__button">Lean More</button></a>
               </div>
@@ -142,7 +170,7 @@
               <div class="feed__inner">
                 <div class="feed__title coral">Design / Front End Development</div>
                 <p class="small">HTML, CSS, Responsive, Javascript</p>
-                <p class="feed__info">Responsive Event Website.</p>
+                <p class="feed__info">Responsive Event Website</p>
                 <a href="study-bridgetobridge.html"><button class="btn link-blue feed__button">Lean More</button></a>
               </div>
             </div>
@@ -150,106 +178,13 @@
           </div>
         </div>
       </section>
-        <!-- <div class="grid clearfix">
-        	<a href="study-kfog.html">
-                <div id="kfog" class="cube dark-greyBkgd">
-                   <img class="logo" src="img/cubes/cube-kfog.png" alt="KFOG Logo">
-                   <p>KFOG: Website Rebuild<br>
-                   <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-levis.html">
-                <div id="levis" class="cube light-greyBkgd">
-                    <img class="logo" src="img/cubes/cube-levis.png" alt="Levi's® Lounge Logo">
-                    <p>Levi's<span style="font-size:11px;vertical-align:top;">®</span> Lounge: Microsite<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-bridgetobridge.html">
-                <div id="bridgetobridge" class="cube whiteBkgd">
-                    <img class="logo" src="img/cubes/cube-bridgetobridge.png" alt="Bridge to Bridge Logo">
-                    <p>Bridge to Bridge: Website Rebuild<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; JavaScript</span></p>
-                </div>
-            </a>
-            <a href="study-mcdonalds.html">
-                <div id="fanfest" class="cube light-greyBkgd">
-                    <img class="logo" src="img/cubes/cube-mcdonalds.png" alt="FanFest Logo">
-                    <p>KNBR FanFest Insider 2016: Microsite<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-kgoradio.html">
-                <div id="kgoradio" class="cube middle-greyBkgd">
-                    <img class="logo" src="img/cubes/cube-kgoradio.png" alt="KGO Radio Logo">
-                    <p>KGO Radio: Partial Website Rebuild<br>
-                    <span class="upper small">css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-knbr.html">
-                <div id="bashof" class="cube whiteBkgd">
-                    <img class="logo" src="img/cubes/cube-knbr.png" alt="KNBR Logo">
-                    <p>KNBR Partnership Auctions: Pages<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-foodbanks.html">
-                <div id="foodbanks" class="cube whiteBkgd">
-                    <img class="logo" src="img/cubes/cube-foodbanks.png" alt="Food Banks Logo">
-                    <p>Bay Area Food Banks: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; Wordpress</span></p>
-                </div>
-            </a>
-            <a href="study-sobek.html">
-                <div id="sobek" class="cube dark-greyBkgd">
-                    <img class="logo" src="img/cubes/cube-sobek.png" alt="Sobek Logo">
-                    <p>Mountain Travel Sobek: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</span></p>
-                </div>
-            </a>
-            <a  href="study-yosemite.html">
-                <div id="yosemite" class="cube middle-greyBkgd">
-                    <img class="logo" src="img/cubes/cube-yosemite.png" alt="Yosemite Logo">
-                    <p>Yosemite Experience: Microsite<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive &#x000B7; PHP &#x000B7; MySQL</span></p>
-                </div>
-            </a>
-            <a  href="#">
-                <div id="" class="cube whiteBkgd blank">
-                    
-                </div>
-            </a>
-            <a  href="study-colossal.html">
-                <div id="colossal" class="cube whiteBkgd">
-                    <img class="logo" src="img/cubes/cube-colossal.png" alt="Colossal Logo">
-                    <p>This is Colossal: Website Rebuild<br>
-                    <span class="upper small">html &#x000B7; css &#x000B7; Responsive Design &#x000B7; Bootstrap</span></p>
-                </div>
-            </a>
-            <a  href="#">
-                <div id="" class="cube whiteBkgd blank">
-                    
-                </div>
-            </a>
-        </div> -->
-	</div>
+      <footer>
+        <h6>Morgan Taylor &#169; 2018</h6>
+      </footer>
+  	</div>
+  </div><!-- pageWrapper end -->
 
-	<footer class="clearfix">
-    	<div class="social-icons">
-          <span class="fa fa-linkedin-square"></span><p>View my <a href="https://www.linkedin.com/in/morganataylor" target="_blank">LinkedIn Profile</a></p>
-          <span class="fa fa-pinterest"></span><p> Follow my Pinterest boards <a href="https://www.pinterest.com/mataylor8/" target="_blank">@mataylor8</a> for <a href="https://www.pinterest.com/mataylor8/web-design/" target="_blank">web design</a>, <a href="https://www.pinterest.com/mataylor8/css/" target="_blank">CSS </a>& <a href="https://www.pinterest.com/mataylor8/uxui/" target="_blank">UX/UI</a> ideas</p>
-          <span class="fa fa-github"></span><p>To sample my projects view <a href="https://github.com/morgantaylor" target="_blank">@morgantaylor</a> on GitHub</p>
-        </div>
-        <div class="copyright">
-        	<a href="about.html"><p>About</p></a>
-            <a href="portfolio.html"><p>Portfolio</p></a>
-            <a href="contact.html"><p>Contact</p></a>
-            <h6>Morgan Taylor &#169; 2016</h6>
-        </div>
-    </footer>
-</div><!-- pageWrapper end -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
