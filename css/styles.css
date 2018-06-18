@@ -771,6 +771,8 @@ section {
   width: 100%;
   max-width: 700px;
   padding: 20px 0; }
+  .panel__container--intro {
+    padding: 20px; }
   .panel__container--about p {
     padding: 30px 0; }
   .panel__container--about button {
