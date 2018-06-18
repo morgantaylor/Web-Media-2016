@@ -6,9 +6,14 @@
 	
 	&__box {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 		max-width: 800px;
 		margin: 30px 0;
+
+		@include for-size(tablet-portrait-up) {
+			flex-direction: row;
+	    }
 
 		.small {
 			font-family: $ptsans;
@@ -21,17 +26,29 @@
 	}
 
 	&__img {
-		height: 200px;
+		height: 210px;
 	    width: 100%;
 	    max-width: 300px;
-	    margin-right: 25px;
+	    min-width: 300px;
+	    margin: 0 auto;
         display: flex;
 	    justify-content: center;
 	    align-items: center;
+
+	    @include for-size(tablet-portrait-up) {
+	    	margin: 0 25px 0 0;
+	    }
 	}
 
 	&__inner {
-		text-align: left;
+	    max-width: 375px;
+	    margin: 0 auto;
+	    padding: 15px 0;
+
+	    @include for-size(tablet-portrait-up) {
+	    	padding: 0;
+	    	text-align: left;
+	    }
 	}
 
 	&__title {
