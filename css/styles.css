@@ -694,6 +694,7 @@ h2 {
 
 .feed__box {
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   max-width: 800px;
@@ -721,11 +722,17 @@ h2 {
 .feed__inner {
   max-width: 375px;
   margin: 0 auto;
-  padding: 15px 0; }
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
   @media (min-width: 600px) {
     .feed__inner {
       padding: 0;
-      text-align: left; } }
+      text-align: left;
+      align-items: flex-start; } }
 .feed__title {
   font-size: 18px; }
 .feed__button {
