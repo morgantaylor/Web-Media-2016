@@ -1,0 +1,114 @@
+// ==============
+// Typography
+// ============== 
+
+hr {
+    border: .5px solid #ccc;
+}  
+
+.paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2a2f33;
+    margin-bottom: 20px;
+}
+
+.paragraph-light {
+    @extend .paragraph;
+    color: $white;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.lead {
+    font-size: 17.5px;
+    line-height: 28px;
+}
+
+.small,
+.disclaimer {
+    font-size: 12px;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    text-align: left;
+}
+
+.list-styled {
+    text-align: left;
+    margin: 20px 0 20px 20px;
+}
+
+.list-disc {
+    @extend .list-styled;
+    list-style-type: disc;
+}
+
+.list-numbered {
+    @extend .list-styled;
+    list-style-type: decimal;
+}
+
+h1 {
+    font-weight: 800;
+    color: #000;
+
+    @include for-size(phone-only) {
+        font-size: 1em;
+    }
+}
+
+h2 {
+    color: #000;
+}
+
+.upper {
+    text-transform: uppercase;
+    font-size:15px;
+}
+
+.text h3 {
+    color: #333;
+}
+
+.panel__container {
+    &--intro {
+        font-size: 20px;
+    }
+    &--about {
+        p {
+            font-weight: 300;
+        }
+    }
+    &--skills {
+        li {
+            text-align: center;
+        }
+    }
+    &--projects {
+        h3 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+p {
+    @include for-size(phone-only) {
+        font-size: 16px;
+    }
+}

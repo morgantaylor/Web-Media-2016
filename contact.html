@@ -9,9 +9,8 @@
 <meta name="author" content="Morgan Taylor">
 <title>Morgan Taylor | Contact</title>
 
-<link href="css/normalize.min.css" rel="stylesheet" type="text/css">
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800" rel="stylesheet">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -47,12 +46,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Morgan Taylor<br><small>Front-End Web Developer</small></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="http://mtwebmedia.com">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li class="active"><a href="contact.html">Contact</a></li>
         </ul>
@@ -61,30 +58,40 @@
   </nav>
   <div class="pageWrapper">
     <div class="innerPage">
-    	<section class="pageTop bkgd">
-        	<h1>Contact Me</h1>
-        </section>
-        <section class="text">
-        	<iframe src="contact.php"></iframe>
-        </section>
-	</div>
-
-	<footer class="clearfix">
-    	<div class="social-icons">
-          <span class="fa fa-linkedin-square"></span><p>View my <a href="https://www.linkedin.com/in/morganataylor" target="_blank">LinkedIn Profile</a></p>
-          <span class="fa fa-pinterest"></span><p> Follow my Pinterest boards <a href="https://www.pinterest.com/mataylor8/" target="_blank">@mataylor8</a> for <a href="https://www.pinterest.com/mataylor8/web-design/" target="_blank">web design</a>, <a href="https://www.pinterest.com/mataylor8/css/" target="_blank">CSS </a>& <a href="https://www.pinterest.com/mataylor8/uxui/" target="_blank">UX/UI</a> ideas</p>
-          <span class="fa fa-github"></span><p>To sample my projects view <a href="https://github.com/morgantaylor" target="_blank">@morgantaylor</a> on GitHub</p>
+      <section class="panel whiteBkgd">
+        <div class="panel__container--info">
+          <h1>Contact Me</h1>
+          <p>Fill out the form below and I'll be sure to get in touch.</p>
         </div>
-        <div class="copyright">
-        	<a href="about.html"><p>About</p></a>
-            <a href="portfolio.html"><p>Portfolio</p></a>
-            <a href="contact.html"><p>Contact</p></a>
-            <h6>Morgan Taylor &#169; 2016</h6>
-        </div>
-    </footer>
-</div><!-- pageWrapper end -->
+      </section>
+      <section class="panel">
+      	<form id="contact-form" method="post" action="contact.php" role="form" data-toggle="validator">
+          <div class="messages"></div>
+          <fieldset class="form-group">
+            <label for="form_name">Name *</label>
+              <input id="form_name" type="text" name="name" placeholder="Please enter your name *" required="required" data-error="Name is required.">
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="form_email">Email *</label>
+              <input id="form_email" type="email" name="email" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="form_message">Message *</label>
+              <textarea id="form_message" name="message" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
+          </fieldset>
+          <fieldset class="form-group">
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+  	</div>
+  </div><!-- pageWrapper end -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script async type="text/javascript" src="js/main.js"></script> 
 </body>
 </html>

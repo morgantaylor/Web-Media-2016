@@ -1,0 +1,80 @@
+// =====================
+// Mixins Components
+// =====================
+
+
+// Text
+
+@mixin text ($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// Button
+
+@mixin button-skin($prefix, $main-color) {
+    @if $prefix == 'btn-' {
+        background-color: $main-color;
+        color: $white;
+        border: 1px solid $main-color;
+
+        &:hover {
+            color: $white;
+            background-color: darken($main-color, 10%);
+            border-color: darken($main-color, 12%);
+        }
+    }
+    @if $prefix == 'btn-reverse-' {
+        color: $main-color;
+        background-color: transparent;
+        border: 1px solid $main-color;
+
+        &:hover {
+            color: darken($main-color, 12%);
+            background-color: transparent;
+            border-color: darken($main-color, 12%);
+        }
+    }
+    @if $prefix == 'link-' {
+        color: $main-color;
+        background-color: transparent;
+        border: 1px solid transparent;
+
+        &:hover {
+            color: darken($main-color, 12%);
+            background-color: transparent;
+            border-color: transparent;
+        }
+    }
+}
+
+// Media Queries
+
+@mixin for-size($range) {
+  $phone-upper-boundary: 600px;
+  $tablet-portrait-upper-boundary: 900px;
+  $tablet-landscape-upper-boundary: 1200px;
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+  } @else if $range == tablet-portrait-up {
+    @media (min-width: $phone-upper-boundary) { @content; }
+  } @else if $range == tablet-landscape-up {
+    @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+  } @else if $range == desktop-up {
+    @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == big-desktop-up {
+    @media (min-width: $desktop-upper-boundary) { @content; }
+  }
+}
+
+// usage
+// .my-box {
+//  padding: 10px;
+  
+//  @include for-size(desktop-up) {
+//    padding: 20px;
+//  }
+//}

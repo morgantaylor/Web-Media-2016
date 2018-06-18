@@ -1,0 +1,17 @@
+.social-icons {
+	display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+	
+.social-icons span {
+	font-size: 32px;
+    padding: 20px;
+    width: auto;
+    color: $white;
+
+    &:hover {
+    	color: $black;
+    }
+}
+	
