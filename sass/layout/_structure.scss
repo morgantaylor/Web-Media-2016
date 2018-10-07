@@ -49,6 +49,7 @@ section {
 
     &--about {
         p {
+            margin-bottom: 60px;
             padding: 30px 0;
         }
         button {
@@ -91,6 +92,16 @@ section {
             justify-content: center;
             align-items: center;
         }
+    }
+
+    &--micro {
+        h1 + p {
+            text-align: center;
+        }
+    }
+
+    &--info {
+        margin-top: 60px;
     }
 }
 
@@ -175,21 +186,49 @@ section {
 .study {
     margin: 0 auto 60px auto;
     width: 100%;
-    max-width: 650px;
+    max-width: 1000px;
     padding: 40px 20px;
     text-align: left;
 
     h1 {
         text-align: center;
+        margin-bottom: 60px;
     }
 
+    .top-image,
     .image {
-        margin: 0 auto 60px 0;
-        max-width: 1000px;
+        max-width: 650px;
         width: 100%;
         height: auto;
         display: block;
         position: relative;
+    }
+
+    .top-image {
+        margin: 30px auto 60px auto;
+    }
+
+    .image {
+        margin: 60px auto;
+    }
+
+    &-cubes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+
+        .feed__img {
+            margin: 5px 15px;
+        }
+    }
+
+    .case-study {
+        width: 100%;
+        max-width: 650px;
+        display: block;
+        margin: 0 auto;
     }
 }
 

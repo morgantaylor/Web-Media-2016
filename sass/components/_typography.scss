@@ -65,7 +65,7 @@ hr {
 }
 
 h1 {
-    font-weight: 800;
+    font-weight: 400;
     color: #000;
 
     @include for-size(phone-only) {
@@ -75,6 +75,10 @@ h1 {
 
 h2 {
     color: #000;
+}
+
+h3 {
+    margin-top: 30px;
 }
 
 .upper {
