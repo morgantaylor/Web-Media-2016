@@ -222,6 +222,13 @@ section {
         .feed__img {
             margin: 5px 15px;
         }
+
+        .study-cube {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
     }
 
     .case-study {
